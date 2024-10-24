@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades HTML</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <!--Actividades del formulario-->
+    <form action="#" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" pattern="[A-Za-z\s]+" required>
+        <br><br>
+        <label for="email">Correo:</label>
+        <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+        <br><br>
+        <label for="mensaje">Mensaje:</label>
+        <br>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea>
+        <br><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar formulario">
+        <br><br>
+
+    <!--Actividades del formulario avanzado-->
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" min="1" max="100">
+        <br><br>
+        <label for="satisfaccion">Nivel de satisfacción (1-10):</label>
+        <input type="range" id="satisfaccion" name="satisfaccion" min="1" max="10">
+        <br><br>
+        <label for="fecha">Fecha de nacimiento:</label>
+        <input type="date" id="fecha" name="fecha">
+        <br><br>
+        <label for="pais">Selecciona tu país:</label>
+        <select id="pais" name="pais">
+            <option value="">Selecciona un país</option>
+            <option value="mexico">México</option>
+            <option value="espana">España</option>
+            <option value="argentina">Argentina</option>
+        </select>
+        <br><br>
+        <label for="deportes">Selecciona tus deportes favoritos:</label>
+        <select id="deportes" name="deportes" multiple size="2">
+            <option value="futbol">Fútbol</option>
+            <option value="baloncesto">Baloncesto</option>
+            <option value="natacion">Natación</option>
+            <option value="tenis">Tenis</option>
+            <option value="beisbol">Béisbol</option>
+        </select>
+        <br><br>
+        <label>Género:</label><br>
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="masculino">Masculino</label>
+        <br>
+        <input type="radio" id="femenino" name="genero" value="femenino" checked>
+        <label for="femenino">Femenino</label>
+        <br>
+        <input type="radio" id="otro" name="genero" value="otro">
+        <label for="otro">Otro</label>
+        <br><br>
+        <label>Intereses:</label>
+        <br>
+        <input type="checkbox" id="musica" name="intereses" value="musica" checked>
+        <label for="musica">Música</label>
+        <br>
+        <input type="checkbox" id="deporte" name="intereses" value="deporte">
+        <label for="deporte">Deporte</label>
+        <br>
+        <input type="checkbox" id="cine" name="intereses" value="cine" checked>
+        <label for="cine">Cine</label>
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <!--Actividad de tablas-->
+    <h2>Tabla de estudiantes</h2>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Calificación</th>
+        </tr>
+        <tr>
+            <td>Juan</td>
+            <td>22</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>María</td>
+            <td>19</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>Pedro</td>
+            <td>21</td>
+            <td>78</td>
+        </tr>
+    </table>
+
+    <h2>Tabla de productos</h2>
+    <table border="1">
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+        </tr>
+        <tr>
+            <td>Manzanas</td>
+            <td>5</td>
+            <td>$3.00</td>
+        </tr>
+        <tr>
+            <td>Bananas</td>
+            <td>3</td>
+            <td>$2.50</td>
+        </tr>
+        <tr>
+            <td>Naranjas</td>
+            <td>7</td>
+            <td>$4.00</td>
+        </tr>
+        <tr>
+            <th colspan="2">Total</th>
+            <td>$9.50</td>
+        </tr>
+    </table>
+    
+    <!--Actividad footer-->
+    <footer>
+        <p>&copy; <span id="year"></span> Curso de HTML. Todos los derechos reservados.</p>
+        <a href="https://facebook.com" target="_blank">Facebook</a> |
+        <a href="https://twitter.com" target="_blank">Twitter</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
